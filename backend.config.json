@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "media": { "source": "./functions/media.ts", "env": ["DATABASE_URL"] },
+    "grade": { "source": "./functions/grade.ts", "env": ["DATABASE_URL"] },
+    "forms": { "source": "./functions/forms.ts", "env": ["DATABASE_URL", "RESEND_API_KEY", "RESEND_FROM", "OWNER_EMAIL"] }
+  },
+  "buckets": {
+    "site-media": { "access": "private" }
+  }
+}

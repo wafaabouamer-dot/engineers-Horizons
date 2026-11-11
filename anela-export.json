@@ -1,0 +1,57 @@
+{
+  "source": "Anela",
+  "framework": "React 19.2.7, Vite 7.3.6, TypeScript ~5.9.0, Tailwind CSS ^4.1.0",
+  "entry": {
+    "file": "src/main.tsx",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build"
+  },
+  "env": [
+    "DEV",
+    "VITE_DATA_API_URL",
+    "VITE_NEON_AUTH_PATH",
+    "VITE_NEON_AUTH_URL",
+    "VITE_NEON_DATA_API_URL"
+  ],
+  "integrations": [
+    "neon database",
+    "Anela accounts (auth)",
+    "browser data API"
+  ],
+  "database": {
+    "used": true,
+    "provider": "neon",
+    "schemaPath": "db/schema.sql",
+    "includesData": false,
+    "tables": [
+      "categories",
+      "certificates",
+      "contact_messages",
+      "courses",
+      "enrollments",
+      "events",
+      "lesson_progress",
+      "lessons",
+      "page_views",
+      "posts",
+      "profiles",
+      "questions",
+      "quiz_attempts",
+      "quizzes",
+      "site_admins",
+      "site_settings",
+      "trainer_access",
+      "trainer_requests",
+      "trainers",
+      "volunteer_applications"
+    ]
+  },
+  "excluded": [
+    "Database rows. Only the schema travels, and only as DDL.",
+    "Secret values. Keys saved in Anela are never in project files. In .env files, only VITE_ values are kept, and none shaped like a key.",
+    "User accounts and their credentials.",
+    "Custom domains and DNS records.",
+    "Regenerable and machine-local directories: .git/, .next/, .pnpm-store/, .turbo/, .vite/, .wb/, .wb-checkpoint-control/, .wb-checkpoint-staging/, build/, coverage/, dist/, node_modules/, and 2 directories the Anela workspace uses for itself",
+    "Big original uploads in attachments/large/ (videos and other large files sent in the chat). They stay in the project in Anela; download them from Files."
+  ]
+}

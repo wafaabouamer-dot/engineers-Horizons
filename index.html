@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أكاديمية آفاق | Afaq Academy</title>
+    <meta name="description" content="دورات وورشات وبرامج تدريبية لطلبة الجامعات والخريجين والمهندسين — من التسجيل حتى الشهادة." />
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme) document.documentElement.classList.toggle('dark', theme === 'dark');
+      } catch (e) {}
+    </script>
+    <script>
+      (function () {
+        var probe = document.createElement('div');
+        probe.style.cssText = 'position:absolute;top:-99px;width:50px;height:50px;overflow:scroll';
+        document.documentElement.appendChild(probe);
+        if (probe.offsetWidth > probe.clientWidth) document.documentElement.classList.add('classic-scrollbars');
+        probe.remove(); 
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
